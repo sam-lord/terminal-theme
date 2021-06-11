@@ -1,0 +1,12 @@
+{{!< default}}
+
+{{#tag}}
+<p>Posts tagged under <span class="tag">{{name}}</span></p>
+{{/tag}}
+<hr>
+
+{{#foreach posts}}
+{{> "post-summary"}}
+{{/foreach}}
+
+{{pagination}}

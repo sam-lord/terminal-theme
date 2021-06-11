@@ -1,0 +1,30 @@
+<article class="{{post_class}} bordered">
+    <div class="post-title-bar">
+        <h1><a href="{{url}}" class="quiet-link">{{title}}</a></h1>
+        {{#if primary_tag}}
+        {{#primary_tag}}
+        <p class="secondary">
+            <a href="{{url}}" class="tag primary-tag quiet-link secondary">{{name}}</a>
+        </p>
+        {{/primary_tag}}
+        {{/if}}
+    </div>
+    
+
+    {{#if feature_image}}
+    <p>{{excerpt words="36"}}... <span class="no-break"><a href="{{url}}">continue reading</a></span></p>
+    {{else}}
+    <p>{{excerpt words="44"}}... <span class="no-break"><a href="{{url}}">continue reading</a></span></p>
+    {{/if}}
+
+    <p class="secondary">
+        <span class="authors">
+            {{#foreach authors}}
+            <a href="{{url}}" class="author quiet-link">{{name}}</a>
+            {{/foreach}}
+        </span>
+        <span class="publish-date">
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD/MM/YYYY"}}</time>
+        </span>
+    </p>
+</article>
