@@ -41,17 +41,22 @@ body {
     margin: 0;
     width: 100%;
     font-family: "JetBrains Mono", monospace;
-    font-size: 14px;
+    font-size: 15px;
     line-height: var(--line-height);
     display: flex;
     justify-content: center;
     background-color: var(--nord1);
 }
-.terminal {
+/* Main class */
+body > .terminal {
     background-color: var(--bg-color);
     color: var(--color);
     max-width: var(--page-width);
-    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.2);
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: none;
+    border-bottom: none;
 }
 .bordered > *:first-child {
     margin-top: 0;
@@ -193,12 +198,14 @@ img {
     vertical-align: top;
 }
 @media only screen and (max-width: 700px) {
+    body {
+        font-size: 14px;
+    }
+
     .terminal {
         margin: 0;
         border: none;
         width: 100vw;
-        min-height: 100vh;
-        border-radius: 0;
     }
 }
 
@@ -344,6 +351,9 @@ figcaption::after {
     max-width: calc(calc(100% + calc(var(--character-width) * 2)) - 2 * var(--border-width));
     margin-left: calc(var(--border-width) + calc(-1 * var(--character-width)));
     overflow: hidden;
+}
+.kg-image-card.kg-width-full > img {
+    width: 100%;
 }
 .kg-image-card.kg-width-full > figcaption {
     margin-left: var(--character-width);
