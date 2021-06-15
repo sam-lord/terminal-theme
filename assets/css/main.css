@@ -226,7 +226,6 @@ img {
 }
 
 .primary-tag {
-    float: right;
     color: var(--secondary-color);
 }
 .tag {
@@ -247,9 +246,6 @@ a.quiet-link,a.quiet-link:visited {
 }
 
 .post-title-bar {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
     margin-top: var(--line-height);
     margin-bottom: var(--line-height);
 }
